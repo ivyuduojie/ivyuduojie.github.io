@@ -77,7 +77,6 @@
             font-size: 1.1rem;
             color: #4a5568;
             line-height: 1.8;
-            font-style: italic;
         }
         
         .contact-links {
@@ -122,12 +121,6 @@
             border-radius: 15px;
             margin-bottom: 2rem;
             border-left: 5px solid #667eea;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
         }
         
         .project-title {
@@ -141,12 +134,6 @@
             color: #718096;
             font-size: 0.9rem;
             margin-bottom: 1rem;
-        }
-        
-        .project-description {
-            color: #4a5568;
-            margin-bottom: 1rem;
-            line-height: 1.7;
         }
         
         .tech-stack {
@@ -182,90 +169,6 @@
             font-size: 1.1rem;
         }
         
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .skill-category {
-            background: #f7fafc;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-top: 3px solid #667eea;
-        }
-        
-        .skill-category h3 {
-            color: #2d3748;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-        }
-        
-        .skill-category li {
-            padding: 0.3rem 0;
-            color: #4a5568;
-        }
-        
-        .skill-category li:before {
-            content: "→ ";
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .experience-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-        
-        .experience-header {
-            margin-bottom: 1rem;
-        }
-        
-        .job-title {
-            font-size: 1.3rem;
-            color: #2d3748;
-            font-weight: 600;
-        }
-        
-        .company {
-            color: #667eea;
-            font-weight: 500;
-        }
-        
-        .date {
-            color: #718096;
-            font-size: 0.9rem;
-        }
-        
-        .achievements {
-            list-style: none;
-            margin-top: 0.5rem;
-        }
-        
-        .achievements li {
-            padding: 0.4rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .achievements li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
         .passion-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -278,11 +181,6 @@
             padding: 1.5rem;
             border-radius: 15px;
             border-top: 4px solid #667eea;
-            transition: transform 0.3s;
-        }
-        
-        .passion-card:hover {
-            transform: translateY(-5px);
         }
         
         .passion-icon {
@@ -299,6 +197,26 @@
         .passion-card p {
             color: #4a5568;
             line-height: 1.6;
+        }
+        
+        .beyond-section {
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .beyond-section h3 {
+            color: #e67e22;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .beyond-section p {
+            color: #7d6608;
+            line-height: 1.8;
+            margin-bottom: 1rem;
         }
         
         .cta-section {
@@ -341,7 +259,7 @@
                 text-align: center;
             }
             
-            .skills-grid, .passion-grid {
+            .passion-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -354,63 +272,55 @@
                 <div class="profile-image">IU</div>
                 <div class="header-text">
                     <h1>Ivy Uduojie</h1>
-                    <div class="tagline">Product Leader | Emerging Data Analyst | AI Enthusiast | Redefining Fashion on My Terms</div>
-                    <p class="intro">"I do a lot of things afraid. I'm a mother, a dreamer, a plain dresser turned fashion rebel, and someone learning to build tech solutions for problems I've lived. This is my rebranding journey—unapologetically me."</p>
+                    <div class="tagline">Product Manager | Schulich Tech MBA Candidate | 10+ Years Fintech Experience</div>
+                    <p class="intro">Transitioning from traditional product management in banking to tech product leadership. I bring customer-obsessed product depth, process improvement expertise, and a track record of delivering measurable business impact. I do a lot of things afraid—but I do them anyway.</p>
                     <div class="contact-links">
                         <a href="mailto:ivyemordi14@gmail.com">📧 Email</a>
                         <a href="https://www.linkedin.com/in/ivy-uduojie" target="_blank">💼 LinkedIn</a>
-                        <a href="tel:+14168240858">📱 +1 416 824 0858</a>
                     </div>
                 </div>
             </div>
         </header>
 
         <div class="section">
-            <h2>Why I Build: A Mother's Journey to Self-Love</h2>
+            <h2>Professional Highlights</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
+                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">25%</div>
+                    <div style="color: #2d3748; font-weight: 600;">Account Growth</div>
+                    <div style="color: #4a5568; font-size: 0.9rem;">Scaled salary accounts through strategic campaigns</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
+                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">50%</div>
+                    <div style="color: #2d3748; font-weight: 600;">Attrition Reduction</div>
+                    <div style="color: #4a5568; font-size: 0.9rem;">Led digital transformation improving retention</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
+                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">₦2M+</div>
+                    <div style="color: #2d3748; font-weight: 600;">Cost Savings</div>
+                    <div style="color: #4a5568; font-size: 0.9rem;">Streamlined workflows annually</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Why I Build: A Mother's Journey</h2>
             <div class="personal-story">
                 <strong>💜 The Real Story Behind StyleFit</strong>
                 <p>After having my kids, I struggled to love my body. The protruding tummy. The failed diet plans. My conscious decision to NOT settle for undelicious meals just to fit society's standards. I couldn't find outfits that looked good on MY body—everything seemed designed for bodies that weren't mine.</p>
                 <p style="margin-top: 1rem;">So I thought: what if there was an app that models outfits based on my body frame, instead of forcing my frame to fit into outfits? What if I could define fashion in my own way and be fine with me?</p>
-                <p style="margin-top: 1rem;">I'm not a fashion expert. I've lived largely as a plain dresser. But in this new era, I'm rebranding myself. StyleFit is my first tech project—built on Replit with no coding background, fueled by postpartum frustration turned into product vision. If I can help one other mother feel beautiful in her skin, this is worth it.</p>
+                <p style="margin-top: 1rem;">I'm not a fashion expert—I'm a product manager who identified a gap in the market. StyleFit represents my transition: leveraging customer empathy and business analysis skills to build tech solutions.</p>
             </div>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568;">
-                With 10+ years in banking and financial services, I've managed products, led teams, and optimized processes that impacted thousands. Now pursuing my Tech MBA at Schulich, I'm bridging business experience with emerging technology—and learning to code through building. I'm an emerging data analyst because I believe you must understand your numbers to sell your products effectively.
-            </p>
         </div>
 
         <div class="section">
-            <h2>Featured Project: StyleFit</h2>
+            <h2>Featured Projects</h2>
+            
             <div class="project-card">
                 <div class="project-title">StyleFit - AI-Powered Body-Inclusive Fashion Platform</div>
-                <div class="project-meta">🚀 Built on Replit | First Tech Project | 2024</div>
-                <div class="project-description">
-                    Born from personal experience, StyleFit is an AI-powered fashion recommendation app that celebrates real bodies and cultural authenticity. It uses camera-based analysis to provide personalized styling for YOUR body frame—not the other way around—while incorporating cultural fashion preferences from African, Asian, Middle Eastern, and global fusion styles.
-                </div>
-                
-                <div style="background: #fff5f7; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong style="color: #2d3748;">The Problem I'm Solving:</strong>
-                    <p style="margin-top: 0.5rem; color: #4a5568; line-height: 1.7;">
-                        Fashion apps show clothes on models with "ideal" bodies. But what about mothers with protruding tummies? Women who refuse to starve for fashion? Bodies that have lived, loved, and carried children? StyleFit says: your body is the model. Let's find outfits that celebrate YOU.
-                    </p>
-                </div>
-
-                <div style="background: #f7fafc; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong style="color: #2d3748;">Key Features:</strong>
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: #4a5568;">
-                        <li>Camera-based body analysis interface</li>
-                        <li>AI-powered style recommendations for YOUR frame</li>
-                        <li>Cultural diversity filters celebrating global fashion</li>
-                        <li>Inclusive imagery featuring diverse body types</li>
-                        <li>Mobile-responsive design built with real users in mind</li>
-                        <li>Global revenue model with accessible pricing</li>
-                    </ul>
-                </div>
-
-                <div style="background: #fff5f7; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong style="color: #2d3748;">What I Learned Building This:</strong>
-                    <p style="margin-top: 0.5rem; color: #4a5568; line-height: 1.7;">
-                        I learned React components from YouTube at 2am while my kids slept. I Googled every error message. I celebrated when buttons worked. Building StyleFit taught me that you don't need permission to solve your own problems—you just need courage and WiFi. Every bug I fixed felt like reclaiming power. Every feature that worked felt like validation.
-                    </p>
+                <div class="project-meta">🚀 Built on Replit | 2024</div>
+                <div style="color: #4a5568; margin-bottom: 1rem; line-height: 1.7;">
+                    An AI-powered fashion recommendation app that celebrates real bodies and cultural authenticity. Uses camera-based analysis to provide personalized styling for YOUR body frame—incorporating cultural preferences from African, Asian, Middle Eastern, and global fusion styles.
                 </div>
 
                 <div class="tech-stack">
@@ -419,186 +329,81 @@
                     <span class="tech-tag">No-Code AI</span>
                     <span class="tech-tag">User-Centered Design</span>
                     <span class="tech-tag">Mobile-First</span>
-                    <span class="tech-tag">Self-Taught</span>
                 </div>
 
                 <div style="margin-top: 1.5rem;">
-                    <strong style="color: #667eea;">Status:</strong> Deployed and iterating based on user feedback
+                    <strong style="color: #667eea;">Status:</strong> MVP deployed for beta testing
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Scaling Salary Accounts Through Customer-Centric Iteration</div>
+                <div class="project-meta">🏦 UBA | Product Manager | 2019-2022</div>
+                <div style="color: #4a5568; margin-bottom: 1rem; line-height: 1.7;">
+                    Led product management for salary accounts at one of Nigeria's largest banks, transforming a fragmented product into a structured growth engine that enabled consumer lending.
+                </div>
+
+                <div style="background: #fff5f7; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                    <strong style="color: #2d3748;">My Product Philosophy:</strong>
+                    <p style="margin-top: 0.5rem; color: #4a5568; line-height: 1.7;">
+                        "Sales is tough when product-market fit is weak. The product team must develop solutions that genuinely meet customer needs—then sales becomes easier because customers get value and word-of-mouth drives scalability. Continuous improvement is non-negotiable."
+                    </p>
+                </div>
+
+                <div style="background: #f7fafc; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                    <strong style="color: #2d3748;">Results:</strong>
+                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: #4a5568;">
+                        <li>Achieved 25% account growth through customer-centric iterations</li>
+                        <li>SALSA campaign delivered 10% volume growth</li>
+                        <li>Enabled consumer lending vertical launch</li>
+                    </ul>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Product Strategy</span>
+                    <span class="tech-tag">Customer Research</span>
+                    <span class="tech-tag">Risk Management</span>
+                    <span class="tech-tag">Campaign Design</span>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>What Makes Me Authentically Me</h2>
+            <h2>What Drives Me</h2>
             <div class="passion-grid">
                 <div class="passion-card">
                     <div class="passion-icon">📊</div>
-                    <h3>Emerging Data Analyst</h3>
-                    <p>I must understand my numbers to sell my products. Data tells stories, and I'm learning to listen. From banking metrics to user analytics, I believe in making decisions backed by evidence.</p>
+                    <h3>Data-Informed Decisions</h3>
+                    <p>Clean data is the truest source of truth. I combine quantitative metrics with qualitative insights for informed product decisions.</p>
                 </div>
                 
                 <div class="passion-card">
-                    <div class="passion-icon">✍️</div>
-                    <h3>Content Creator</h3>
-                    <p>I love beautiful content and well-designed spaces. There's power in how we present ideas—whether it's a product brief or a portfolio. Aesthetics matter because they communicate care.</p>
+                    <div class="passion-icon">👥</div>
+                    <h3>Customer Obsession</h3>
+                    <p>I start with user problems. The best products come from deep empathy and solving real pain points, not assumed needs.</p>
                 </div>
                 
                 <div class="passion-card">
-                    <div class="passion-icon">🏡</div>
-                    <h3>Secret Interior Designer</h3>
-                    <p>Beautifully designed spaces are my secret dream. I believe environments shape experiences, and I'm fascinated by how space, light, and design influence how we feel and work.</p>
+                    <div class="passion-icon">🚀</div>
+                    <h3>Bias to Action</h3>
+                    <p>When I saw a problem, I built StyleFit. I don't wait for perfect conditions—I validate, prototype, and learn.</p>
                 </div>
+            </div>
+
+            <div class="beyond-section">
+                <h3>💭 Beyond Product Management</h3>
+                <p><em>I believe in living out my full potential. Product management is one expression of who I am, but not the only one.</em></p>
                 
-                <div class="passion-card">
-                    <div class="passion-icon">🍽️</div>
-                    <h3>Culinary Explorer</h3>
-                    <p>I love testing different continental dishes. Food is culture, memory, and joy. I refuse to settle for undelicious meals—life's too short. Exploring cuisines teaches me about diversity and delight.</p>
-                </div>
+                <p style="margin-top: 1rem;">🏡 <strong>Design & Spaces</strong> · 🍽️ <strong>Culinary Exploration</strong> · ✍️ <strong>Content & Storytelling</strong> · 🌍 <strong>Perpetual Learning</strong></p>
                 
-                <div class="passion-card">
-                    <div class="passion-icon">🌍</div>
-                    <h3>Perpetual Explorer</h3>
-                    <p>I'm always exploring new places, meeting vulnerable people like me. Travel reminds me the world is vast and we're all figuring it out. There's beauty in shared uncertainty.</p>
-                </div>
-                
-                <div class="passion-card">
-                    <div class="passion-icon">💭</div>
-                    <h3>Radically Curious</h3>
-                    <p>I'm evolving, rebranding, trying new terrains. From banking to tech, from plain dresser to fashion rebel, from fear to building—I'm learning that curiosity is the antidote to stagnation.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Professional Experience Highlights</h2>
-            
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="job-title">Business Analyst</div>
-                    <div class="company">10Alytics, Canada</div>
-                    <div class="date">July 2025 - Present</div>
-                </div>
-                <ul class="achievements">
-                    <li>Reduced project reporting delays by 20% through enhanced Jira and Confluence workflows</li>
-                    <li>Created user stories with acceptance criteria, cutting sprint rework by 15%</li>
-                    <li>Facilitated UAT sessions improving defect detection by 25%</li>
-                    <li>Managed RACI matrices reducing approval delays by 30%</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="job-title">Workplace Banking Product Officer</div>
-                    <div class="company">Wema Bank Plc, Lagos, Nigeria</div>
-                    <div class="date">Dec 2022 - Mar 2023</div>
-                </div>
-                <ul class="achievements">
-                    <li>Executed consumer lending strategic roadmap resulting in 20% increase in loan applications in one quarter</li>
-                    <li>Drafted PRDs and FRDs aligned with Agile delivery</li>
-                    <li>Ensured product compliance with regulatory standards</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="job-title">Associate Product Manager</div>
-                    <div class="company">United Bank for Africa Plc, Lagos, Nigeria</div>
-                    <div class="date">Feb 2021 - Nov 2022</div>
-                </div>
-                <ul class="achievements">
-                    <li>Collaborated with engineering to improve workflow visibility, boosting operational efficiency 20%</li>
-                    <li>Expanded use cases into detailed specs to minimize development misalignments</li>
-                    <li>Prioritized backlog to deliver high-impact features complying with regulations</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="job-title">Contact Centre Supervisor</div>
-                    <div class="company">United Bank for Africa Plc, Lagos, Nigeria</div>
-                    <div class="date">May 2013 - June 2018</div>
-                </div>
-                <ul class="achievements">
-                    <li>Led operations for 40-agent contact centre handling 700+ interactions weekly</li>
-                    <li>Managed CRM migration improving efficiency and response times by 30%</li>
-                    <li>Streamlined workflows reducing average handling time by 30%, saving over ₦2M annually</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Core Skills & Evolving Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Product Management</h3>
-                    <ul>
-                        <li>Requirements Gathering</li>
-                        <li>PRD/BRD Documentation</li>
-                        <li>User Story Creation</li>
-                        <li>Product Roadmapping</li>
-                        <li>Stakeholder Management</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Agile & Tools</h3>
-                    <ul>
-                        <li>Jira & Confluence</li>
-                        <li>Azure DevOps</li>
-                        <li>Scrum Methodology</li>
-                        <li>UAT Facilitation</li>
-                        <li>Sprint Planning</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Data & Analysis</h3>
-                    <ul>
-                        <li>Data Analysis (Emerging)</li>
-                        <li>Google Analytics</li>
-                        <li>Process Mapping</li>
-                        <li>RACI Matrix</li>
-                        <li>Workflow Optimization</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Building & Creating</h3>
-                    <ul>
-                        <li>No-Code Platforms</li>
-                        <li>Replit Development</li>
-                        <li>AI Integration</li>
-                        <li>UX/UI Principles</li>
-                        <li>Content Design</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Education & Certifications</h2>
-            <div style="display: grid; gap: 1.5rem;">
-                <div style="background: #f7fafc; padding: 1.5rem; border-radius: 12px;">
-                    <strong style="color: #2d3748; font-size: 1.1rem;">Master of Business Administration (Tech Leadership)</strong>
-                    <div style="color: #667eea; margin-top: 0.3rem;">Schulich School of Business, York University</div>
-                    <div style="color: #718096; font-size: 0.9rem;">Expected 2026</div>
-                </div>
-                <div style="background: #f7fafc; padding: 1.5rem; border-radius: 12px;">
-                    <strong style="color: #2d3748; font-size: 1.1rem;">Bachelor of Arts (International Studies and Diplomacy)</strong>
-                    <div style="color: #667eea; margin-top: 0.3rem;">University of Benin</div>
-                    <div style="color: #718096; font-size: 0.9rem;">2007</div>
-                </div>
-                <div style="background: #f7fafc; padding: 1.5rem; border-radius: 12px;">
-                    <strong style="color: #2d3748; font-size: 1.1rem;">Certifications</strong>
-                    <ul style="margin-top: 0.5rem; list-style: none;">
-                        <li style="padding: 0.3rem 0; color: #4a5568;">✓ Certified Scrum Product Owner (CSPO), 2024</li>
-                        <li style="padding: 0.3rem 0; color: #4a5568;">✓ Google Data Analytics (Coursera), 2023</li>
-                        <li style="padding: 0.3rem 0; color: #4a5568;">✓ Client Needs and Software Requirements (Coursera), 2023</li>
-                    </ul>
-                </div>
+                <p style="margin-top: 1rem; font-style: italic;">"If product management doesn't happen, I'll find another way to solve problems, create value, and build things people love. I'm evolving, and that's the point."</p>
             </div>
         </div>
 
         <div class="section cta-section">
             <h2>Let's Connect</h2>
-            <p style="font-size: 1.1rem; margin: 1rem 0;">I'm open to product roles, data analyst opportunities, collaborations with fellow builders, and conversations with anyone doing things afraid. If you're solving problems for real people, rebranding yourself, or just figuring it out—let's talk.</p>
+            <p style="font-size: 1.1rem; margin: 1.5rem 0;">I'm seeking Product Manager roles in fintech, health tech, or consumer-focused companies where I can apply my customer-obsessed approach. Open to Associate to Mid-Level PM positions.</p>
+            <p style="font-size: 1rem; margin: 1rem 0;">Also open to collaborations with fellow builders, conversations about design and evolution, and opportunities I haven't imagined yet.</p>
             <div>
                 <a href="mailto:ivyemordi14@gmail.com" class="cta-button">Get In Touch</a>
                 <a href="https://www.linkedin.com/in/ivy-uduojie" class="cta-button" target="_blank">Connect on LinkedIn</a>
