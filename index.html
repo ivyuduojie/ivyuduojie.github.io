@@ -1,414 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivy Uduojie - Product Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .header-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            color: #1a202c;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            color: #667eea;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        
-        .intro {
-            font-size: 1.1rem;
-            color: #4a5568;
-            line-height: 1.8;
-        }
-        
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-links a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.2s;
-            display: inline-block;
-        }
-        
-        .contact-links a:hover {
-            transform: translateY(-2px);
-            color: #764ba2;
-        }
-        
-        .section {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            font-size: 2rem;
-            color: #1a202c;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-        
-        .project-card {
-            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            border-left: 5px solid #667eea;
-        }
-        
-        .project-title {
-            font-size: 1.5rem;
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .project-meta {
-            color: #718096;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tech-stack {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        
-        .tech-tag {
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .personal-story {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid #f56565;
-            color: #742a2a;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .personal-story strong {
-            color: #c53030;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .passion-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .passion-card {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-top: 4px solid #667eea;
-        }
-        
-        .passion-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .passion-card h3 {
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .passion-card p {
-            color: #4a5568;
-            line-height: 1.6;
-        }
-        
-        .beyond-section {
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-top: 2rem;
-            border-left: 4px solid #f39c12;
-        }
-        
-        .beyond-section h3 {
-            color: #e67e22;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .beyond-section p {
-            color: #7d6608;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            color: white;
-        }
-        
-        .cta-section h2 {
-            color: white;
-            border: none;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 1rem 0.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .passion-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivy Uduojie — Product Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1a18;
+      --paper: #f5f3ef;
+      --mid: #6b6860;
+      --gold: #b8963e;
+      --rule: #dedad4;
+      --white: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6vw; height: 62px;
+    }
+    .nav-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 400; letter-spacing: 0.04em;
+      color: var(--ink); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--mid); transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* SECTIONS */
+    section { padding: 6rem 6vw; border-top: 1px solid var(--rule); }
+    .label {
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.8rem; font-weight: 400;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 300;
+      line-height: 1.15; margin-bottom: 3rem; max-width: 640px;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 62px; min-height: 90vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 62px 6vw 5rem;
+    }
+    .hero-eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.6rem; font-weight: 400;
+      opacity: 0; animation: up 0.9s 0.28s forwards;
+    }
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 300;
+      line-height: 1.0; margin-bottom: 2rem;
+      opacity: 0; animation: up 0.9s 0.44s forwards;
+    }
+    .hero-name em { color: var(--mid); }
+    .hero-desc {
+      max-width: 500px; font-size: 0.97rem; color: var(--mid);
+      line-height: 1.85; margin-bottom: 2.5rem;
+      opacity: 0; animation: up 0.9s 0.58s forwards;
+    }
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      opacity: 0; animation: up 0.9s 0.72s forwards;
+    }
+    .tag {
+      padding: 0.3rem 0.85rem; border: 1px solid var(--rule);
+      font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    /* ABOUT */
+    .about-grid { display: flex; gap: 4rem; align-items: flex-start; }
+    .about-body { flex: 1; }
+    .about-body p { color: var(--mid); margin-bottom: 1.1rem; line-height: 1.85; font-size: 0.95rem; }
+    .about-body strong { color: var(--ink); font-weight: 500; }
+    .about-skills { flex: 1; }
+    .skill-block { border-top: 1px solid var(--rule); padding-top: 0.9rem; margin-bottom: 1.3rem; }
+    .skill-block .sl { font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.3rem; }
+    .skill-block .sv { font-size: 0.85rem; color: var(--ink); font-weight: 300; }
+
+    /* EXPERIENCE */
+    .exp-item { border-top: 1px solid var(--rule); padding: 2rem 0; display: grid; grid-template-columns: 200px 1fr; gap: 2rem; }
+    .exp-co { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    .exp-period { font-size: 0.75rem; color: var(--mid); font-weight: 300; }
+    .exp-role { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color: var(--ink); margin-bottom: 0.55rem; }
+    .exp-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.8; margin-bottom: 0.8rem; }
+    .exp-bullet { font-size: 0.83rem; color: var(--mid); padding-left: 1.1rem; position: relative; line-height: 1.75; margin-bottom: 0.3rem; }
+    .exp-bullet::before { content: '—'; position: absolute; left: 0; color: var(--rule); }
+    .exp-end { border-bottom: 1px solid var(--rule); }
+
+    /* CASE CARDS */
+    .cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+    .case-card {
+      background: var(--white); padding: 2.4rem; cursor: pointer;
+      border: 1px solid var(--rule);
+      transition: background 0.25s, transform 0.18s;
+    }
+    .case-card:hover { background: var(--ink); transform: translateY(-2px); }
+    .case-card:hover .cc-industry { color: var(--gold); }
+    .case-card:hover .cc-title,
+    .case-card:hover .cc-summary { color: var(--paper); }
+    .case-card:hover .cc-tool { border-color: rgba(255,255,255,0.15); color: #9e9b96; }
+    .case-card:hover .cc-arrow { color: var(--gold); transform: translate(3px,-3px); }
+    .cc-industry { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; transition: color 0.25s; }
+    .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--ink); line-height: 1.25; margin-bottom: 0.9rem; transition: color 0.25s; }
+    .cc-divider { width: 28px; height: 1px; background: var(--rule); margin-bottom: 0.9rem; }
+    .cc-summary { font-size: 0.83rem; color: var(--mid); line-height: 1.78; margin-bottom: 1.5rem; transition: color 0.25s; }
+    .cc-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.8rem; }
+    .cc-tool { font-size: 0.63rem; letter-spacing: 0.09em; text-transform: uppercase; border: 1px solid var(--rule); padding: 0.18rem 0.55rem; color: var(--mid); transition: color 0.25s, border-color 0.25s; }
+    .cc-arrow { display: inline-block; color: var(--rule); transition: color 0.25s, transform 0.25s; }
+
+    /* OVERLAY */
+    .overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(26,26,24,0.55); backdrop-filter: blur(5px);
+      align-items: flex-start; justify-content: center;
+      padding: 2rem; overflow-y: auto;
+    }
+    .overlay.active { display: flex; }
+    .detail {
+      background: var(--paper); max-width: 740px; width: 100%;
+      margin: auto; padding: 3rem; position: relative;
+    }
+    .close-btn {
+      position: absolute; top: 1.2rem; right: 1.2rem;
+      background: none; border: none; font-size: 1.5rem;
+      cursor: pointer; color: var(--mid); transition: color 0.2s; line-height: 1;
+    }
+    .close-btn:hover { color: var(--ink); }
+    .d-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
+    .d-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem,3vw,2rem); font-weight: 300; line-height: 1.2; color: var(--ink); margin-bottom: 0.6rem; }
+    .d-role { font-size: 0.78rem; color: var(--mid); margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); font-weight: 300; }
+    .d-section { margin-bottom: 1.6rem; }
+    .d-section-label { font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.6rem; }
+    .d-section p { font-size: 0.88rem; color: var(--mid); line-height: 1.82; font-weight: 300; }
+    .d-bullet { font-size: 0.86rem; color: var(--mid); padding-left: 1.1rem; position: relative; line-height: 1.78; margin-bottom: 0.3rem; font-weight: 300; }
+    .d-bullet::before { content: '—'; position: absolute; left: 0; color: var(--rule); }
+    .metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; background: var(--white); padding: 1.6rem; margin-bottom: 1.8rem; }
+    .metric-val { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; text-align: center; }
+    .metric-lbl { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-align: center; }
+    .insight-box { background: var(--white); padding: 1.4rem; margin-bottom: 1.5rem; border-left: 2px solid var(--gold); }
+    .insight-box .d-section-label { margin-bottom: 0.45rem; }
+    .insight-box p { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--ink); line-height: 1.75; font-style: italic; font-weight: 300; }
+
+    /* DIAGRAMS */
+    .diagram { background: var(--white); padding: 1.8rem; margin-bottom: 1.6rem; }
+    .diagram-label { font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); margin-bottom: 1.2rem; }
+    .flow-step { display: flex; align-items: center; }
+    .flow-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .flow-line { width: 1px; height: 26px; background: var(--rule); margin: 0 auto; }
+    .flow-connector { width: 18px; display: flex; flex-direction: column; align-items: center; }
+    .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .ba-title { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500; }
+    .ba-step { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.45rem; }
+    .ba-arrow { font-size: 0.68rem; color: var(--rule); margin-top: 0.12rem; flex-shrink: 0; }
+    .ba-text { font-size: 0.8rem; color: var(--mid); line-height: 1.5; font-weight: 300; }
+    .pipeline { display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem; }
+    .pipeline-step { padding: 0.4rem 0.75rem; background: var(--paper); border: 1px solid var(--rule); font-size: 0.72rem; color: var(--ink); white-space: nowrap; }
+    .pipeline-arrow { color: var(--gold); font-size: 0.8rem; }
+    .pipeline-note { font-size: 0.72rem; color: var(--gold); margin-top: 1rem; font-style: italic; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.7rem; }
+    .kpi-item { padding: 0.75rem; border: 1px solid var(--rule); }
+    .kpi-name { font-size: 0.75rem; color: var(--ink); font-weight: 500; margin-bottom: 0.2rem; }
+    .kpi-desc { font-size: 0.68rem; color: var(--mid); font-weight: 300; }
+
+    /* CONTACT */
+    .contact-inner { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2.5rem; }
+    .contact-email {
+      color: var(--ink); text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 300;
+      border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s; display: inline-block; margin-top: 1rem;
+    }
+    .contact-email:hover { color: var(--gold); border-color: var(--gold); }
+    .contact-links { display: flex; gap: 2rem; }
+    .contact-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+    .contact-links a:hover { color: var(--ink); }
+
+    footer { padding: 1.8rem 6vw; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; }
+    footer p { font-size: 0.68rem; color: var(--rule); letter-spacing: 0.06em; }
+
+    /* ANIMATIONS */
+    @keyframes up { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .about-grid { flex-direction: column; }
+      .exp-item { grid-template-columns: 1fr; gap: 0.3rem; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr 1fr; }
+      .before-after { grid-template-columns: 1fr; }
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+      .detail { padding: 1.8rem 1.2rem; }
+      nav { padding: 0 5vw; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="profile-image">IU</div>
-                <div class="header-text">
-                    <h1>Ivy Uduojie</h1>
-                    <div class="tagline">Product Manager | Schulich Tech MBA Candidate | 10+ Years Fintech Experience</div>
-                    <p class="intro">Transitioning from traditional product management in banking to tech product leadership. I bring customer-obsessed product depth, process improvement expertise, and a track record of delivering measurable business impact. I do a lot of things afraid—but I do them anyway.</p>
-                    <div class="contact-links">
-                        <a href="mailto:ivyemordi14@gmail.com">📧 Email</a>
-                        <a href="https://www.linkedin.com/in/ivy-uduojie" target="_blank">💼 LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <div class="section">
-            <h2>Professional Highlights</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
-                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">25%</div>
-                    <div style="color: #2d3748; font-weight: 600;">Account Growth</div>
-                    <div style="color: #4a5568; font-size: 0.9rem;">Scaled salary accounts through strategic campaigns</div>
-                </div>
-                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
-                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">50%</div>
-                    <div style="color: #2d3748; font-weight: 600;">Attrition Reduction</div>
-                    <div style="color: #4a5568; font-size: 0.9rem;">Led digital transformation improving retention</div>
-                </div>
-                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
-                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">₦2M+</div>
-                    <div style="color: #2d3748; font-weight: 600;">Cost Savings</div>
-                    <div style="color: #4a5568; font-size: 0.9rem;">Streamlined workflows annually</div>
-                </div>
-            </div>
-        </div>
+<!-- NAV -->
+<nav>
+  <a class="nav-name" href="#top">Ivy Uduojie</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-        <div class="section">
-            <h2>Why I Build: A Mother's Journey</h2>
-            <div class="personal-story">
-                <strong>💜 The Real Story Behind StyleFit</strong>
-                <p>After having my kids, I struggled to love my body. The protruding tummy. The failed diet plans. My conscious decision to NOT settle for undelicious meals just to fit society's standards. I couldn't find outfits that looked good on MY body—everything seemed designed for bodies that weren't mine.</p>
-                <p style="margin-top: 1rem;">So I thought: what if there was an app that models outfits based on my body frame, instead of forcing my frame to fit into outfits? What if I could define fashion in my own way and be fine with me?</p>
-                <p style="margin-top: 1rem;">I'm not a fashion expert—I'm a product manager who identified a gap in the market. StyleFit represents my transition: leveraging customer empathy and business analysis skills to build tech solutions.</p>
-            </div>
-        </div>
+<!-- HERO -->
+<section class="hero" id="top" style="border-top:none;">
+  <p class="hero-eyebrow">Product Manager · Toronto, ON</p>
+  <h1 class="hero-name">Ivy<br><em>Uduojie</em></h1>
+  <p class="hero-desc">Fintech and financial services product professional with experience across digital lending, consumer banking, and business analytics. I translate complex operational problems into clear product decisions.</p>
+  <div class="hero-tags">
+    <span class="tag">Fintech</span>
+    <span class="tag">Digital Lending</span>
+    <span class="tag">Product Management</span>
+    <span class="tag">Business Analysis</span>
+    <span class="tag">Financial Services</span>
+  </div>
+</section>
 
-        <div class="section">
-            <h2>Featured Projects</h2>
-            
-            <div class="project-card">
-                <div class="project-title">StyleFit - AI-Powered Body-Inclusive Fashion Platform</div>
-                <div class="project-meta">🚀 Built on Replit | 2024</div>
-                <div style="color: #4a5568; margin-bottom: 1rem; line-height: 1.7;">
-                    An AI-powered fashion recommendation app that celebrates real bodies and cultural authenticity. Uses camera-based analysis to provide personalized styling for YOUR body frame—incorporating cultural preferences from African, Asian, Middle Eastern, and global fusion styles.
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Replit</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">No-Code AI</span>
-                    <span class="tech-tag">User-Centered Design</span>
-                    <span class="tech-tag">Mobile-First</span>
-                </div>
-
-                <div style="margin-top: 1.5rem;">
-                    <strong style="color: #667eea;">Status:</strong> MVP deployed for beta testing
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Scaling Salary Accounts Through Customer-Centric Iteration</div>
-                <div class="project-meta">🏦 UBA | Product Manager | 2019-2022</div>
-                <div style="color: #4a5568; margin-bottom: 1rem; line-height: 1.7;">
-                    Led product management for salary accounts at one of Nigeria's largest banks, transforming a fragmented product into a structured growth engine that enabled consumer lending.
-                </div>
-
-                <div style="background: #fff5f7; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong style="color: #2d3748;">My Product Philosophy:</strong>
-                    <p style="margin-top: 0.5rem; color: #4a5568; line-height: 1.7;">
-                        "Sales is tough when product-market fit is weak. The product team must develop solutions that genuinely meet customer needs—then sales becomes easier because customers get value and word-of-mouth drives scalability. Continuous improvement is non-negotiable."
-                    </p>
-                </div>
-
-                <div style="background: #f7fafc; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong style="color: #2d3748;">Results:</strong>
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: #4a5568;">
-                        <li>Achieved 25% account growth through customer-centric iterations</li>
-                        <li>SALSA campaign delivered 10% volume growth</li>
-                        <li>Enabled consumer lending vertical launch</li>
-                    </ul>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Product Strategy</span>
-                    <span class="tech-tag">Customer Research</span>
-                    <span class="tech-tag">Risk Management</span>
-                    <span class="tech-tag">Campaign Design</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>What Drives Me</h2>
-            <div class="passion-grid">
-                <div class="passion-card">
-                    <div class="passion-icon">📊</div>
-                    <h3>Data-Informed Decisions</h3>
-                    <p>Clean data is the truest source of truth. I combine quantitative metrics with qualitative insights for informed product decisions.</p>
-                </div>
-                
-                <div class="passion-card">
-                    <div class="passion-icon">👥</div>
-                    <h3>Customer Obsession</h3>
-                    <p>I start with user problems. The best products come from deep empathy and solving real pain points, not assumed needs.</p>
-                </div>
-                
-                <div class="passion-card">
-                    <div class="passion-icon">🚀</div>
-                    <h3>Bias to Action</h3>
-                    <p>When I saw a problem, I built StyleFit. I don't wait for perfect conditions—I validate, prototype, and learn.</p>
-                </div>
-            </div>
-
-            <div class="beyond-section">
-                <h3>💭 Beyond Product Management</h3>
-                <p><em>I believe in living out my full potential. Product management is one expression of who I am, but not the only one.</em></p>
-                
-                <p style="margin-top: 1rem;">🏡 <strong>Design & Spaces</strong> · 🍽️ <strong>Culinary Exploration</strong> · ✍️ <strong>Content & Storytelling</strong> · 🌍 <strong>Perpetual Learning</strong></p>
-                
-                <p style="margin-top: 1rem; font-style: italic;">"If product management doesn't happen, I'll find another way to solve problems, create value, and build things people love. I'm evolving, and that's the point."</p>
-            </div>
-        </div>
-
-        <div class="section cta-section">
-            <h2>Let's Connect</h2>
-            <p style="font-size: 1.1rem; margin: 1.5rem 0;">I'm seeking Product Manager roles in fintech, health tech, or consumer-focused companies where I can apply my customer-obsessed approach. Open to Associate to Mid-Level PM positions.</p>
-            <p style="font-size: 1rem; margin: 1rem 0;">Also open to collaborations with fellow builders, conversations about design and evolution, and opportunities I haven't imagined yet.</p>
-            <div>
-                <a href="mailto:ivyemordi14@gmail.com" class="cta-button">Get In Touch</a>
-                <a href="https://www.linkedin.com/in/ivy-uduojie" class="cta-button" target="_blank">Connect on LinkedIn</a>
-            </div>
-        </div>
+<!-- ABOUT -->
+<section id="about">
+  <p class="label">About</p>
+  <h2 class="section-heading fade-in">Product thinking grounded in financial services.</h2>
+  <div class="about-grid">
+    <div class="about-body">
+      <p class="fade-in">I am a product professional with experience in <strong>digital lending and consumer banking</strong>, where I worked on live financial products serving thousands of customers. My work sits at the intersection of product strategy, risk management, and operational systems.</p>
+      <p class="fade-in">More recently I have developed strong <strong>business analysis and data skills</strong> through project work spanning operational transformation, process design, and analytics dashboards. I work well in cross-functional teams and translate business goals into technical requirements.</p>
+      <p class="fade-in">Targeting roles in <strong>fintech, digital banking, and financial services</strong> where domain knowledge and analytical depth can add immediate value.</p>
     </div>
+    <div class="about-skills">
+      <div class="skill-block fade-in"><p class="sl">Core Skills</p><p class="sv">Product Strategy · Requirements & BRD · Stakeholder Management · Risk Analysis · Data Analysis</p></div>
+      <div class="skill-block fade-in"><p class="sl">Tools</p><p class="sv">Jira · Confluence · Power BI · PostgreSQL · Excel · Figma</p></div>
+      <div class="skill-block fade-in"><p class="sl">Domain</p><p class="sv">Digital Lending · Consumer Credit · Operational Transformation · Retail Analytics</p></div>
+      <div class="skill-block fade-in"><p class="sl">Education</p><p class="sv">Business Analysis — 10Alytics · MBA (in progress)</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="label">Experience</p>
+  <h2 class="section-heading fade-in">Where I have worked.</h2>
+
+  <div class="exp-item fade-in">
+    <div><p class="exp-co">United Bank for Africa</p><p class="exp-period">Digital Banking · Lagos, Nigeria</p></div>
+    <div>
+      <p class="exp-role">Product Manager, Digital Lending</p>
+      <p class="exp-desc">Managed UBA Click Credit, a mobile-first digital lending product providing unsecured consumer loans. Worked across product, credit risk, compliance, and operations.</p>
+      <p class="exp-bullet">Identified systemic default risk driven by insufficient borrower employment verification, leading to product workflow improvements</p>
+      <p class="exp-bullet">Collaborated with credit risk teams to analyse default drivers and translate findings into product requirements</p>
+      <p class="exp-bullet">Balanced product availability against portfolio risk, maintaining the lending channel while strengthening controls</p>
+      <p class="exp-bullet">Managed product decisions across consumer lending portfolio including personal loans, asset finance, and salary-backed credit</p>
+    </div>
+  </div>
+
+  <div class="exp-item fade-in">
+    <div><p class="exp-co">Wema Bank</p><p class="exp-period">Retail Banking · Nigeria</p></div>
+    <div>
+      <p class="exp-role">Product & Operations</p>
+      <p class="exp-desc">Supported retail banking product operations with a focus on consumer lending, customer experience, and operational processes.</p>
+      <p class="exp-bullet">Supported credit product operations across the retail lending portfolio</p>
+      <p class="exp-bullet">Worked with cross-functional teams to improve operational workflows and customer outcomes</p>
+    </div>
+  </div>
+
+  <div class="exp-item fade-in">
+    <div><p class="exp-co">10Alytics</p><p class="exp-period">Remote · Business Analyst</p></div>
+    <div>
+      <p class="exp-role">Business Analyst</p>
+      <p class="exp-desc">Delivered end-to-end business analysis projects across product design, operational transformation, and data analytics in a cross-functional team environment.</p>
+      <p class="exp-bullet">Queried transactional datasets using PostgreSQL and built Power BI dashboards to surface retail performance insights</p>
+      <p class="exp-bullet">Led requirements gathering, stakeholder analysis, and BRD documentation across multiple projects</p>
+      <p class="exp-bullet">Managed project backlog and sprint planning in Jira using Agile methodology</p>
+    </div>
+  </div>
+  <div class="exp-end"></div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="work">
+  <p class="label">Case Studies</p>
+  <h2 class="section-heading fade-in">Selected work.</h2>
+  <div class="cases-grid">
+
+    <div class="case-card fade-in" onclick="openCase('cc1')">
+      <p class="cc-industry">Fintech · Digital Lending</p>
+      <h3 class="cc-title">Reducing Default Risk in a Digital Lending Product</h3>
+      <div class="cc-divider"></div>
+      <p class="cc-summary">UBA Click Credit experienced persistent loan defaults above the internal risk threshold. I worked with credit, compliance, and operations to identify structural root causes and translate findings into product improvements — keeping the product live while strengthening controls.</p>
+      <div class="cc-tools"><span class="cc-tool">Risk Analysis</span><span class="cc-tool">Credit Operations</span><span class="cc-tool">Stakeholder Management</span><span class="cc-tool">Product Strategy</span></div>
+      <span class="cc-arrow">↗</span>
+    </div>
+
+    <div class="case-card fade-in" onclick="openCase('cc2')">
+      <p class="cc-industry">Enterprise · Process Design</p>
+      <h3 class="cc-title">Digital Canteen Ordering System — Unilever UK</h3>
+      <div class="cc-divider"></div>
+      <p class="cc-summary">1,500 employees were losing 30–35 minutes daily to canteen queues. As part of a cross-functional BA team, I helped define requirements for a web-based ordering platform with payroll integration, yielding a projected ROI of over 2,600% in year one.</p>
+      <div class="cc-tools"><span class="cc-tool">BRD</span><span class="cc-tool">User Stories</span><span class="cc-tool">Jira</span><span class="cc-tool">Stakeholder Mapping</span></div>
+      <span class="cc-arrow">↗</span>
+    </div>
+
+    <div class="case-card fade-in" onclick="openCase('cc3')">
+      <p class="cc-industry">Operations · Business Analysis</p>
+      <h3 class="cc-title">Production Transformation — Barrel & Brew</h3>
+      <div class="cc-divider"></div>
+      <p class="cc-summary">A craft winery serving 500+ restaurant partners was held back by manual inventory, demand guesswork, and bottling failures. I contributed to the BRD for a Brewery Management System designed to digitise operations end to end.</p>
+      <div class="cc-tools"><span class="cc-tool">BRD</span><span class="cc-tool">Process Mapping</span><span class="cc-tool">Requirements Engineering</span></div>
+      <span class="cc-arrow">↗</span>
+    </div>
+
+    <div class="case-card fade-in" onclick="openCase('cc4')">
+      <p class="cc-industry">Analytics · Retail</p>
+      <h3 class="cc-title">Retail Analytics Dashboard — Novamart</h3>
+      <div class="cc-divider"></div>
+      <p class="cc-summary">Retail leadership lacked a unified view of sales performance across channels. I queried transactional data using PostgreSQL and built an interactive Power BI dashboard to surface product, revenue, and channel insights.</p>
+      <div class="cc-tools"><span class="cc-tool">PostgreSQL</span><span class="cc-tool">Power BI</span><span class="cc-tool">Excel</span><span class="cc-tool">KPI Design</span></div>
+      <span class="cc-arrow">↗</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="label">Contact</p>
+  <div class="contact-inner">
+    <div style="max-width:460px;">
+      <h2 class="section-heading" style="margin-bottom:1rem;">Let's talk product.</h2>
+      <p style="color:var(--mid);font-size:0.92rem;line-height:1.8;font-weight:300;">Open to product management roles in fintech, digital banking, and financial services. Based in Toronto — available immediately.</p>
+      <a class="contact-email" href="mailto:ivy.n.uduojie@gmail.com">ivy.n.uduojie@gmail.com</a>
+    </div>
+    <div class="contact-links">
+      <a href="https://linkedin.com/in/ivy-uduojie" target="_blank">LinkedIn ↗</a>
+      <a href="https://ivyuduojie.github.io" target="_blank">Portfolio ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ivy Uduojie</p>
+  <p>Toronto, ON · Canada</p>
+</footer>
+
+
+<!-- ═══════════════════════════════════
+     OVERLAYS
+═══════════════════════════════════ -->
+
+<!-- CLICK CREDIT -->
+<div class="overlay" id="cc1">
+  <div class="detail">
+    <button class="close-btn" onclick="closeCase('cc1')">×</button>
+    <p class="d-label">Fintech · Digital Lending · UBA</p>
+    <h2 class="d-title">Reducing Default Risk in a Digital Lending Product</h2>
+    <p class="d-role">Product Manager — United Bank for Africa · Lagos, Nigeria</p>
+
+    <div class="d-section">
+      <p class="d-section-label">The Problem</p>
+      <p>UBA Click Credit provided fast, unsecured consumer loans through mobile channels. Default rates consistently exceeded the bank's internal portfolio risk threshold, prompting the credit team to periodically recommend suspending the product.</p>
+    </div>
+
+    <!-- Diagram -->
+    <div class="diagram">
+      <p class="diagram-label">Lending Workflow — Gap Identified</p>
+      <div>
+        <div class="flow-step">
+          <div class="flow-connector"><div class="flow-dot" style="background:var(--rule);"></div><div class="flow-line"></div></div>
+          <span style="padding-left:0.6rem;font-size:0.82rem;color:var(--ink);font-weight:300;">Loan Application</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-connector"><div class="flow-dot" style="background:var(--rule);"></div><div class="flow-line"></div></div>
+          <span style="padding-left:0.6rem;font-size:0.82rem;color:var(--ink);font-weight:300;">Eligibility Check</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-connector"><div class="flow-dot" style="background:var(--gold);"></div><div class="flow-line"></div></div>
+          <span style="padding-left:0.6rem;font-size:0.82rem;color:var(--gold);font-weight:500;">Employer Verification</span>
+          <span style="margin-left:0.8rem;font-size:0.68rem;color:var(--gold);font-style:italic;">← gap: not reliably captured</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-connector"><div class="flow-dot" style="background:var(--gold);"></div><div class="flow-line"></div></div>
+          <span style="padding-left:0.6rem;font-size:0.82rem;color:var(--gold);font-weight:500;">Credit Decision</span>
+          <span style="margin-left:0.8rem;font-size:0.68rem;color:var(--gold);font-style:italic;">← manual, inconsistent</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-connector"><div class="flow-dot" style="background:var(--rule);"></div></div>
+          <span style="padding-left:0.6rem;font-size:0.82rem;color:var(--ink);font-weight:300;">Disbursement</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div><p class="metric-val">Internal</p><p class="metric-lbl">Risk threshold breached</p></div>
+      <div><p class="metric-val">3</p><p class="metric-lbl">Root causes identified</p></div>
+      <div><p class="metric-val">Maintained</p><p class="metric-lbl">Product availability</p></div>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">Root Causes</p>
+      <p class="d-bullet">Employer details not reliably captured at onboarding — limiting borrower traceability after disbursement</p>
+      <p class="d-bullet">Uncollateralised loans relied on employer data as implicit collateral — not enforced by the product workflow</p>
+      <p class="d-bullet">Manual credit decisioning created backlogs and inconsistent approval standards</p>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">My Contribution</p>
+      <p class="d-bullet">Identified the employment verification gap as the primary default driver</p>
+      <p class="d-bullet">Mapped the full lending workflow with credit risk, compliance, and operations teams</p>
+      <p class="d-bullet">Proposed employer capture, salary-based eligibility validation, and borrower risk segmentation</p>
+      <p class="d-bullet">Reframed internal discussion from product suspension to risk control improvement</p>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">Impact</p>
+      <p class="d-bullet">Product remained operational while controls were strengthened</p>
+      <p class="d-bullet">Improved borrower traceability through employer capture proposal</p>
+      <p class="d-bullet">Reduced risk exposure through segmentation framework</p>
+      <p class="d-bullet">Cross-functional alignment achieved between product and credit risk teams</p>
+    </div>
+
+    <div class="insight-box">
+      <p class="d-section-label">Key Insight</p>
+      <p>The real problem was not borrower behaviour — it was missing identity signals inside the lending product architecture. Fixing data capture at onboarding was the highest-leverage intervention available.</p>
+    </div>
+    <div><p class="d-section-label">Tools Used</p><p style="font-size:0.83rem;color:var(--mid);font-weight:300;">Risk analysis · Stakeholder collaboration · Credit workflow mapping · Product requirements</p></div>
+  </div>
+</div>
+
+<!-- UNILEVER -->
+<div class="overlay" id="cc2">
+  <div class="detail">
+    <button class="close-btn" onclick="closeCase('cc2')">×</button>
+    <p class="d-label">Enterprise · Process Design · Unilever UK</p>
+    <h2 class="d-title">Digital Canteen Ordering System</h2>
+    <p class="d-role">Business Analyst — 10Alytics (Remote) · Team: POD Lyra</p>
+
+    <div class="d-section">
+      <p class="d-section-label">The Problem</p>
+      <p>At Unilever's UK offices, 1,500 employees shared 300 canteen seats during a single lunch hour — spending 30–35 minutes queuing and as few as 10 minutes eating. The kitchen prepared food based on estimates, causing shortages and waste.</p>
+    </div>
+
+    <!-- Diagram -->
+    <div class="diagram">
+      <p class="diagram-label">Process — Before & After</p>
+      <div class="before-after">
+        <div>
+          <p class="ba-title" style="color:var(--mid);">Before</p>
+          <div class="ba-step"><span class="ba-arrow">→</span><span class="ba-text">Employee arrives at canteen</span></div>
+          <div class="ba-step"><span class="ba-arrow">→</span><span class="ba-text">Joins queue (30–35 min)</span></div>
+          <div class="ba-step"><span class="ba-arrow">→</span><span class="ba-text">Orders at counter</span></div>
+          <div class="ba-step"><span class="ba-arrow">→</span><span class="ba-text">Waits for preparation</span></div>
+          <div class="ba-step"><span class="ba-arrow">→</span><span class="ba-text">10 min to eat</span></div>
+        </div>
+        <div>
+          <p class="ba-title" style="color:var(--gold);">After</p>
+          <div class="ba-step"><span class="ba-arrow" style="color:var(--gold);">→</span><span class="ba-text">Pre-order before 11am</span></div>
+          <div class="ba-step"><span class="ba-arrow" style="color:var(--gold);">→</span><span class="ba-text">Kitchen prepares to demand</span></div>
+          <div class="ba-step"><span class="ba-arrow" style="color:var(--gold);">→</span><span class="ba-text">Meal delivered to desk</span></div>
+          <div class="ba-step"><span class="ba-arrow" style="color:var(--gold);">→</span><span class="ba-text">Full break to eat</span></div>
+          <div class="ba-step"><span class="ba-arrow" style="color:var(--gold);">→</span><span class="ba-text">Payroll auto-deducted</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div><p class="metric-val">30–35 min</p><p class="metric-lbl">Daily queue time saved</p></div>
+      <div><p class="metric-val">2,600%+</p><p class="metric-lbl">Projected Year 1 ROI</p></div>
+      <div><p class="metric-val">&lt; 1 month</p><p class="metric-lbl">Payback period</p></div>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">My Contribution</p>
+      <p class="d-bullet">Stakeholder analysis across 12 operational roles with influence/interest matrix</p>
+      <p class="d-bullet">User stories defined for employee, kitchen, payroll, and management roles</p>
+      <p class="d-bullet">Functional requirements documented and sprint backlog managed in Jira across 5 sprints</p>
+      <p class="d-bullet">Business case built quantifying £4.8M–£5.6M projected annual productivity value</p>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">Impact</p>
+      <p class="d-bullet">750–875 employee-hours recovered daily</p>
+      <p class="d-bullet">20–30% projected reduction in food waste</p>
+      <p class="d-bullet">Full system designed and approved for phased rollout</p>
+      <p class="d-bullet">ROI payback period under one month</p>
+    </div>
+
+    <div class="insight-box">
+      <p class="d-section-label">Key Insight</p>
+      <p>The core problem was not food production capacity — it was the absence of demand visibility. Pre-ordering shifted the system from reactive to planned, unlocking disproportionate value from a simple workflow change.</p>
+    </div>
+    <div><p class="d-section-label">Tools Used</p><p style="font-size:0.83rem;color:var(--mid);font-weight:300;">Jira · Business process mapping · User story documentation · Cost–benefit analysis</p></div>
+  </div>
+</div>
+
+<!-- BARREL & BREW -->
+<div class="overlay" id="cc3">
+  <div class="detail">
+    <button class="close-btn" onclick="closeCase('cc3')">×</button>
+    <p class="d-label">Operations · Business Analysis · Barrel & Brew</p>
+    <h2 class="d-title">Production Operations Transformation</h2>
+    <p class="d-role">Business Analyst — 10Alytics (Remote) · Team: POD Lyra</p>
+
+    <div class="d-section">
+      <p class="d-section-label">The Problem</p>
+      <p>Barrel & Brew ran production on handwritten records and spreadsheets. Despite serving 500+ restaurant partners, recurring delays, bottling stoppages, inconsistent quality, and unreliable inventory were preventing scalable growth.</p>
+    </div>
+
+    <!-- Diagram -->
+    <div class="diagram">
+      <p class="diagram-label">Production Pipeline — Digitised</p>
+      <div class="pipeline">
+        <span class="pipeline-step">Demand Forecast</span><span class="pipeline-arrow">→</span>
+        <span class="pipeline-step">Production Planning</span><span class="pipeline-arrow">→</span>
+        <span class="pipeline-step">Brewing</span><span class="pipeline-arrow">→</span>
+        <span class="pipeline-step">Fermentation Monitoring</span><span class="pipeline-arrow">→</span>
+        <span class="pipeline-step">Bottling</span><span class="pipeline-arrow">→</span>
+        <span class="pipeline-step">Distribution</span>
+      </div>
+      <p class="pipeline-note">IoT sensors + automated scheduling replaced manual tracking at every stage</p>
+    </div>
+
+    <div class="metrics">
+      <div><p class="metric-val">500+</p><p class="metric-lbl">Restaurant partners affected</p></div>
+      <div><p class="metric-val">85–90%</p><p class="metric-lbl">Target delay reduction</p></div>
+      <div><p class="metric-val">95%</p><p class="metric-lbl">Target efficiency gain</p></div>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">My Contribution</p>
+      <p class="d-bullet">Documented As-Is and To-Be workflows across production, quality, and supply chain</p>
+      <p class="d-bullet">Defined functional and non-functional system requirements for the BMS</p>
+      <p class="d-bullet">Contributed to the full Business Requirements Document</p>
+      <p class="d-bullet">Stakeholder mapping across production, quality, sales, and logistics</p>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">Impact</p>
+      <p class="d-bullet">Full BRD delivered covering all production lifecycle stages</p>
+      <p class="d-bullet">Clear digital transformation roadmap established for stakeholder sign-off</p>
+      <p class="d-bullet">Root causes of bottling failures and inventory gaps documented</p>
+      <p class="d-bullet">Foundation laid for vendor selection and system implementation</p>
+    </div>
+
+    <div class="insight-box">
+      <p class="d-section-label">Key Insight</p>
+      <p>Manual systems don't just slow operations — they hide the true scale of inefficiency. The data only became visible when we mapped the full workflow end to end.</p>
+    </div>
+    <div><p class="d-section-label">Tools Used</p><p style="font-size:0.83rem;color:var(--mid);font-weight:300;">BRD · Process mapping · Requirements engineering · Stakeholder analysis</p></div>
+  </div>
+</div>
+
+<!-- NOVAMART -->
+<div class="overlay" id="cc4">
+  <div class="detail">
+    <button class="close-btn" onclick="closeCase('cc4')">×</button>
+    <p class="d-label">Analytics · Retail · Novamart</p>
+    <h2 class="d-title">Retail Analytics Dashboard</h2>
+    <p class="d-role">Business Analyst — 10Alytics (Remote) · Team: POD Lyra</p>
+
+    <div class="d-section">
+      <p class="d-section-label">The Problem</p>
+      <p>Retail leadership had no consolidated view of sales performance across product categories and channels. Decisions on inventory, pricing, and promotions were made without clear data visibility.</p>
+    </div>
+
+    <!-- Diagram -->
+    <div class="diagram">
+      <p class="diagram-label">Dashboard KPI Framework</p>
+      <div class="kpi-grid">
+        <div class="kpi-item"><p class="kpi-name">Total Revenue</p><p class="kpi-desc">By product & period</p></div>
+        <div class="kpi-item"><p class="kpi-name">Top Products</p><p class="kpi-desc">Units sold ranking</p></div>
+        <div class="kpi-item"><p class="kpi-name">Channel Split</p><p class="kpi-desc">Online vs in-store</p></div>
+        <div class="kpi-item"><p class="kpi-name">Monthly Trend</p><p class="kpi-desc">Revenue trajectory</p></div>
+        <div class="kpi-item"><p class="kpi-name">Transaction Vol.</p><p class="kpi-desc">Order frequency</p></div>
+        <div class="kpi-item"><p class="kpi-name">Inventory Signal</p><p class="kpi-desc">Stock vs demand</p></div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div><p class="metric-val">PostgreSQL</p><p class="metric-lbl">Data querying</p></div>
+      <div><p class="metric-val">Power BI</p><p class="metric-lbl">Visualisation</p></div>
+      <div><p class="metric-val">6 KPIs</p><p class="metric-lbl">Defined for leadership</p></div>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">My Contribution</p>
+      <p class="d-bullet">Designed and ran SQL queries to extract and transform retail transaction data</p>
+      <p class="d-bullet">Defined 6-KPI framework aligned to business decision-making needs</p>
+      <p class="d-bullet">Contributed to Power BI dashboard layout and visual hierarchy</p>
+      <p class="d-bullet">Translated data findings into inventory and channel planning recommendations</p>
+    </div>
+
+    <div class="d-section">
+      <p class="d-section-label">Impact</p>
+      <p class="d-bullet">Leadership gained real-time sales visibility for the first time</p>
+      <p class="d-bullet">Top and bottom performing products clearly identified</p>
+      <p class="d-bullet">Channel performance gaps surfaced to inform distribution strategy</p>
+      <p class="d-bullet">Dashboard adopted as ongoing operational reporting tool</p>
+    </div>
+
+    <div class="insight-box">
+      <p class="d-section-label">Key Insight</p>
+      <p>The dashboard didn't just surface data — it changed the questions leadership was able to ask. Visibility is itself a product decision.</p>
+    </div>
+    <div><p class="d-section-label">Tools Used</p><p style="font-size:0.83rem;color:var(--mid);font-weight:300;">PostgreSQL · Power BI · Excel · KPI framework design</p></div>
+  </div>
+</div>
+
+
+<script>
+  function openCase(id) {
+    document.getElementById(id).classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCase(id) {
+    document.getElementById(id).classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.overlay').forEach(o => {
+    o.addEventListener('click', function(e) {
+      if (e.target === o) { o.classList.remove('active'); document.body.style.overflow = ''; }
+    });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.overlay.active').forEach(o => { o.classList.remove('active'); document.body.style.overflow = ''; });
+    }
+  });
+
+  // Scroll fade-in
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
 </body>
 </html>
