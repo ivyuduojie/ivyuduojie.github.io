@@ -1,414 +1,413 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivy Uduojie - Product Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .header-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            color: #1a202c;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            color: #667eea;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        
-        .intro {
-            font-size: 1.1rem;
-            color: #4a5568;
-            line-height: 1.8;
-        }
-        
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-links a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.2s;
-            display: inline-block;
-        }
-        
-        .contact-links a:hover {
-            transform: translateY(-2px);
-            color: #764ba2;
-        }
-        
-        .section {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            font-size: 2rem;
-            color: #1a202c;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-        
-        .project-card {
-            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            border-left: 5px solid #667eea;
-        }
-        
-        .project-title {
-            font-size: 1.5rem;
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .project-meta {
-            color: #718096;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tech-stack {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        
-        .tech-tag {
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .personal-story {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid #f56565;
-            color: #742a2a;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .personal-story strong {
-            color: #c53030;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .passion-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .passion-card {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-top: 4px solid #667eea;
-        }
-        
-        .passion-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .passion-card h3 {
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .passion-card p {
-            color: #4a5568;
-            line-height: 1.6;
-        }
-        
-        .beyond-section {
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-top: 2rem;
-            border-left: 4px solid #f39c12;
-        }
-        
-        .beyond-section h3 {
-            color: #e67e22;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .beyond-section p {
-            color: #7d6608;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            color: white;
-        }
-        
-        .cta-section h2 {
-            color: white;
-            border: none;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 1rem 0.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .passion-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="profile-image">IU</div>
-                <div class="header-text">
-                    <h1>Ivy Uduojie</h1>
-                    <div class="tagline">Product Manager | Schulich Tech MBA Candidate | 10+ Years Fintech Experience</div>
-                    <p class="intro">Transitioning from traditional product management in banking to tech product leadership. I bring customer-obsessed product depth, process improvement expertise, and a track record of delivering measurable business impact. I do a lot of things afraid—but I do them anyway.</p>
-                    <div class="contact-links">
-                        <a href="mailto:ivyemordi14@gmail.com">📧 Email</a>
-                        <a href="https://www.linkedin.com/in/ivy-uduojie" target="_blank">💼 LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+import { useState, useEffect, useRef } from "react";
 
-        <div class="section">
-            <h2>Professional Highlights</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
-                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">25%</div>
-                    <div style="color: #2d3748; font-weight: 600;">Account Growth</div>
-                    <div style="color: #4a5568; font-size: 0.9rem;">Scaled salary accounts through strategic campaigns</div>
-                </div>
-                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
-                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">50%</div>
-                    <div style="color: #2d3748; font-weight: 600;">Attrition Reduction</div>
-                    <div style="color: #4a5568; font-size: 0.9rem;">Led digital transformation improving retention</div>
-                </div>
-                <div style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
-                    <div style="font-size: 2rem; font-weight: bold; color: #667eea;">₦2M+</div>
-                    <div style="color: #2d3748; font-weight: 600;">Cost Savings</div>
-                    <div style="color: #4a5568; font-size: 0.9rem;">Streamlined workflows annually</div>
-                </div>
-            </div>
+/* ── DIAGRAMS ── */
+const ClickCreditDiagram = () => (
+  <div style={{ background: "#fff", padding: "1.8rem", marginBottom: "1.6rem" }}>
+    <p style={{ fontSize: "0.63rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#6b6860", marginBottom: "1.2rem", fontFamily: "'DM Sans', sans-serif" }}>Lending Workflow — Gap Identified</p>
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      {[
+        { label: "Loan Application", ok: true, note: null },
+        { label: "Eligibility Check", ok: true, note: null },
+        { label: "Employer Verification", ok: false, note: "← gap: not reliably captured" },
+        { label: "Credit Decision", ok: false, note: "← manual, inconsistent" },
+        { label: "Disbursement", ok: true, note: null },
+      ].map(({ label, ok, note }, i) => (
+        <div key={i} style={{ display: "flex", alignItems: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 18 }}>
+            <div style={{ width: 10, height: 10, borderRadius: "50%", background: ok ? "#dedad4" : "#b8963e", flexShrink: 0 }} />
+            {i < 4 && <div style={{ width: 1, height: 26, background: "#dedad4" }} />}
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", paddingLeft: "0.6rem" }}>
+            <span style={{ fontSize: "0.82rem", color: ok ? "#1a1a18" : "#b8963e", fontFamily: "'DM Sans', sans-serif", fontWeight: ok ? 300 : 500 }}>{label}</span>
+            {note && <span style={{ fontSize: "0.68rem", color: "#b8963e", fontFamily: "'DM Sans', sans-serif", fontStyle: "italic" }}>{note}</span>}
+          </div>
         </div>
-
-        <div class="section">
-            <h2>Why I Build: A Mother's Journey</h2>
-            <div class="personal-story">
-                <strong>💜 The Real Story Behind StyleFit</strong>
-                <p>After having my kids, I struggled to love my body. The protruding tummy. The failed diet plans. My conscious decision to NOT settle for undelicious meals just to fit society's standards. I couldn't find outfits that looked good on MY body—everything seemed designed for bodies that weren't mine.</p>
-                <p style="margin-top: 1rem;">So I thought: what if there was an app that models outfits based on my body frame, instead of forcing my frame to fit into outfits? What if I could define fashion in my own way and be fine with me?</p>
-                <p style="margin-top: 1rem;">I'm not a fashion expert—I'm a product manager who identified a gap in the market. StyleFit represents my transition: leveraging customer empathy and business analysis skills to build tech solutions.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Featured Projects</h2>
-            
-            <div class="project-card">
-                <div class="project-title">StyleFit - AI-Powered Body-Inclusive Fashion Platform</div>
-                <div class="project-meta">🚀 Built on Replit | 2024</div>
-                <div style="color: #4a5568; margin-bottom: 1rem; line-height: 1.7;">
-                    An AI-powered fashion recommendation app that celebrates real bodies and cultural authenticity. Uses camera-based analysis to provide personalized styling for YOUR body frame—incorporating cultural preferences from African, Asian, Middle Eastern, and global fusion styles.
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Replit</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">No-Code AI</span>
-                    <span class="tech-tag">User-Centered Design</span>
-                    <span class="tech-tag">Mobile-First</span>
-                </div>
-
-                <div style="margin-top: 1.5rem;">
-                    <strong style="color: #667eea;">Status:</strong> MVP deployed for beta testing
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Scaling Salary Accounts Through Customer-Centric Iteration</div>
-                <div class="project-meta">🏦 UBA | Product Manager | 2019-2022</div>
-                <div style="color: #4a5568; margin-bottom: 1rem; line-height: 1.7;">
-                    Led product management for salary accounts at one of Nigeria's largest banks, transforming a fragmented product into a structured growth engine that enabled consumer lending.
-                </div>
-
-                <div style="background: #fff5f7; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong style="color: #2d3748;">My Product Philosophy:</strong>
-                    <p style="margin-top: 0.5rem; color: #4a5568; line-height: 1.7;">
-                        "Sales is tough when product-market fit is weak. The product team must develop solutions that genuinely meet customer needs—then sales becomes easier because customers get value and word-of-mouth drives scalability. Continuous improvement is non-negotiable."
-                    </p>
-                </div>
-
-                <div style="background: #f7fafc; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong style="color: #2d3748;">Results:</strong>
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: #4a5568;">
-                        <li>Achieved 25% account growth through customer-centric iterations</li>
-                        <li>SALSA campaign delivered 10% volume growth</li>
-                        <li>Enabled consumer lending vertical launch</li>
-                    </ul>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Product Strategy</span>
-                    <span class="tech-tag">Customer Research</span>
-                    <span class="tech-tag">Risk Management</span>
-                    <span class="tech-tag">Campaign Design</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>What Drives Me</h2>
-            <div class="passion-grid">
-                <div class="passion-card">
-                    <div class="passion-icon">📊</div>
-                    <h3>Data-Informed Decisions</h3>
-                    <p>Clean data is the truest source of truth. I combine quantitative metrics with qualitative insights for informed product decisions.</p>
-                </div>
-                
-                <div class="passion-card">
-                    <div class="passion-icon">👥</div>
-                    <h3>Customer Obsession</h3>
-                    <p>I start with user problems. The best products come from deep empathy and solving real pain points, not assumed needs.</p>
-                </div>
-                
-                <div class="passion-card">
-                    <div class="passion-icon">🚀</div>
-                    <h3>Bias to Action</h3>
-                    <p>When I saw a problem, I built StyleFit. I don't wait for perfect conditions—I validate, prototype, and learn.</p>
-                </div>
-            </div>
-
-            <div class="beyond-section">
-                <h3>💭 Beyond Product Management</h3>
-                <p><em>I believe in living out my full potential. Product management is one expression of who I am, but not the only one.</em></p>
-                
-                <p style="margin-top: 1rem;">🏡 <strong>Design & Spaces</strong> · 🍽️ <strong>Culinary Exploration</strong> · ✍️ <strong>Content & Storytelling</strong> · 🌍 <strong>Perpetual Learning</strong></p>
-                
-                <p style="margin-top: 1rem; font-style: italic;">"If product management doesn't happen, I'll find another way to solve problems, create value, and build things people love. I'm evolving, and that's the point."</p>
-            </div>
-        </div>
-
-        <div class="section cta-section">
-            <h2>Let's Connect</h2>
-            <p style="font-size: 1.1rem; margin: 1.5rem 0;">I'm seeking Product Manager roles in fintech, health tech, or consumer-focused companies where I can apply my customer-obsessed approach. Open to Associate to Mid-Level PM positions.</p>
-            <p style="font-size: 1rem; margin: 1rem 0;">Also open to collaborations with fellow builders, conversations about design and evolution, and opportunities I haven't imagined yet.</p>
-            <div>
-                <a href="mailto:ivyemordi14@gmail.com" class="cta-button">Get In Touch</a>
-                <a href="https://www.linkedin.com/in/ivy-uduojie" class="cta-button" target="_blank">Connect on LinkedIn</a>
-            </div>
-        </div>
+      ))}
     </div>
-</body>
-</html>
+  </div>
+);
+
+const UnileverDiagram = () => (
+  <div style={{ background: "#fff", padding: "1.8rem", marginBottom: "1.6rem" }}>
+    <p style={{ fontSize: "0.63rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#6b6860", marginBottom: "1.4rem", fontFamily: "'DM Sans', sans-serif" }}>Process — Before & After</p>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+      {[
+        { title: "Before", color: "#6b6860", steps: ["Employee arrives at canteen", "Joins queue (30–35 min)", "Orders at counter", "Waits for preparation", "10 min to eat"] },
+        { title: "After", color: "#b8963e", steps: ["Pre-order before 11am", "Kitchen prepares to demand", "Meal delivered to desk", "Full break to eat", "Payroll auto-deducted"] },
+      ].map(({ title, color, steps }) => (
+        <div key={title}>
+          <p style={{ fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color, marginBottom: "0.8rem", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>{title}</p>
+          {steps.map((s, i) => (
+            <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem", marginBottom: "0.45rem" }}>
+              <span style={{ fontSize: "0.68rem", color: "#dedad4", marginTop: "0.12rem", flexShrink: 0 }}>→</span>
+              <span style={{ fontSize: "0.8rem", color: "#6b6860", fontFamily: "'DM Sans', sans-serif", fontWeight: 300, lineHeight: 1.5 }}>{s}</span>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const BarrelDiagram = () => (
+  <div style={{ background: "#fff", padding: "1.8rem", marginBottom: "1.6rem" }}>
+    <p style={{ fontSize: "0.63rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#6b6860", marginBottom: "1.2rem", fontFamily: "'DM Sans', sans-serif" }}>Production Pipeline — Digitised</p>
+    <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "0.3rem" }}>
+      {["Demand Forecast", "Production Planning", "Brewing", "Fermentation Monitoring", "Bottling", "Distribution"].map((s, i, arr) => (
+        <div key={s} style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+          <div style={{ padding: "0.4rem 0.75rem", background: "#f5f3ef", border: "1px solid #dedad4", fontSize: "0.72rem", color: "#1a1a18", fontFamily: "'DM Sans', sans-serif", whiteSpace: "nowrap" }}>{s}</div>
+          {i < arr.length - 1 && <span style={{ color: "#b8963e", fontSize: "0.8rem" }}>→</span>}
+        </div>
+      ))}
+    </div>
+    <p style={{ fontSize: "0.72rem", color: "#b8963e", marginTop: "1rem", fontFamily: "'DM Sans', sans-serif", fontStyle: "italic" }}>IoT sensors + automated scheduling replaced manual tracking at every stage</p>
+  </div>
+);
+
+const NovamartDiagram = () => (
+  <div style={{ background: "#fff", padding: "1.8rem", marginBottom: "1.6rem" }}>
+    <p style={{ fontSize: "0.63rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#6b6860", marginBottom: "1.2rem", fontFamily: "'DM Sans', sans-serif" }}>Dashboard KPI Framework</p>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "0.7rem" }} className="kpi-grid">
+      {[
+        { kpi: "Total Revenue", desc: "By product & period" },
+        { kpi: "Top Products", desc: "Units sold ranking" },
+        { kpi: "Channel Split", desc: "Online vs in-store" },
+        { kpi: "Monthly Trend", desc: "Revenue trajectory" },
+        { kpi: "Transaction Vol.", desc: "Order frequency" },
+        { kpi: "Inventory Signal", desc: "Stock vs demand" },
+      ].map(({ kpi, desc }) => (
+        <div key={kpi} style={{ padding: "0.75rem", border: "1px solid #dedad4" }}>
+          <p style={{ fontSize: "0.75rem", color: "#1a1a18", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, marginBottom: "0.2rem" }}>{kpi}</p>
+          <p style={{ fontSize: "0.68rem", color: "#6b6860", fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}>{desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const diagrams = { "click-credit": ClickCreditDiagram, unilever: UnileverDiagram, barrel: BarrelDiagram, novamart: NovamartDiagram };
+
+/* ── CASE DATA ── */
+const cases = [
+  {
+    id: "click-credit",
+    industry: "Fintech · Digital Lending",
+    title: "Reducing Default Risk in a Digital Lending Product",
+    summary: "UBA Click Credit experienced persistent loan defaults above the internal risk threshold. I worked with credit, compliance, and operations to identify structural root causes and translate findings into product improvements — keeping the product live while strengthening controls.",
+    tools: ["Risk Analysis", "Credit Operations", "Stakeholder Management", "Product Strategy"],
+    detail: {
+      role: "Product Manager — United Bank for Africa · Lagos, Nigeria",
+      problem: "UBA Click Credit provided fast, unsecured consumer loans through mobile channels. Default rates consistently exceeded the bank's internal portfolio risk threshold, prompting the credit team to periodically recommend suspending the product.",
+      metrics: [{ value: "Internal", label: "Risk threshold breached" }, { value: "3", label: "Root causes identified" }, { value: "Maintained", label: "Product availability" }],
+      sections: [
+        { label: "Root Causes", bullets: ["Employer details not reliably captured at onboarding — limiting borrower traceability after disbursement", "Uncollateralised loans relied on employer data as implicit collateral — not enforced by the product workflow", "Manual credit decisioning created backlogs and inconsistent approval standards"] },
+        { label: "My Contribution", bullets: ["Identified the employment verification gap as the primary default driver", "Mapped the full lending workflow with credit risk, compliance, and operations teams", "Proposed employer capture, salary-based eligibility validation, and borrower risk segmentation", "Reframed internal discussion from product suspension to risk control improvement"] },
+        { label: "Impact", bullets: ["Product remained operational while controls were strengthened", "Improved borrower traceability through employer capture proposal", "Reduced risk exposure through segmentation framework", "Cross-functional alignment achieved between product and credit risk teams"] },
+      ],
+      insight: "The real problem was not borrower behaviour — it was missing identity signals inside the lending product architecture. Fixing data capture at onboarding was the highest-leverage intervention available.",
+      tools: "Risk analysis · Stakeholder collaboration · Credit workflow mapping · Product requirements",
+    },
+  },
+  {
+    id: "unilever",
+    industry: "Enterprise · Process Design",
+    title: "Digital Canteen Ordering System — Unilever UK",
+    summary: "1,500 employees were losing 30–35 minutes daily to canteen queues. As part of a cross-functional BA team, I helped define requirements for a web-based ordering platform with payroll integration, yielding a projected ROI of over 2,600% in year one.",
+    tools: ["BRD", "User Stories", "Jira", "Stakeholder Mapping"],
+    detail: {
+      role: "Business Analyst — 10Alytics (Remote) · Team: POD Lyra",
+      problem: "At Unilever's UK offices, 1,500 employees shared 300 canteen seats during a single lunch hour — spending 30–35 minutes queuing and as few as 10 minutes eating. The kitchen prepared food based on estimates, causing shortages and waste.",
+      metrics: [{ value: "30–35 min", label: "Daily queue time per employee" }, { value: "2,600%+", label: "Projected Year 1 ROI" }, { value: "< 1 month", label: "Payback period" }],
+      sections: [
+        { label: "Solution", bullets: ["Web-based ordering platform — employees pre-order before 11am", "Scheduled desk delivery eliminating canteen congestion entirely", "Kitchen prepares to confirmed demand — no guesswork, no waste", "Automatic payroll deduction removing payment friction"] },
+        { label: "My Contribution", bullets: ["Stakeholder analysis across 12 operational roles with influence/interest matrix", "User stories defined for employee, kitchen, payroll, and management roles", "Functional requirements documented and sprint backlog managed in Jira across 5 sprints", "Business case built quantifying £4.8M–£5.6M projected annual productivity value"] },
+        { label: "Impact", bullets: ["750–875 employee-hours recovered daily", "20–30% projected reduction in food waste", "Full system designed and approved for phased rollout", "ROI payback period under one month"] },
+      ],
+      insight: "The core problem was not food production capacity — it was the absence of demand visibility. Pre-ordering shifted the system from reactive to planned, unlocking disproportionate value from a simple workflow change.",
+      tools: "Jira · Business process mapping · User story documentation · Cost–benefit analysis",
+    },
+  },
+  {
+    id: "barrel",
+    industry: "Operations · Business Analysis",
+    title: "Production Transformation — Barrel & Brew",
+    summary: "A craft winery serving 500+ restaurant partners was held back by manual inventory, demand guesswork, and bottling failures. I contributed to the BRD for a Brewery Management System designed to digitise operations end to end.",
+    tools: ["BRD", "Process Mapping", "Requirements Engineering"],
+    detail: {
+      role: "Business Analyst — 10Alytics (Remote) · Team: POD Lyra",
+      problem: "Barrel & Brew ran production on handwritten records and spreadsheets. Despite serving 500+ restaurant partners, recurring delays, bottling stoppages, inconsistent quality, and unreliable inventory were preventing scalable growth.",
+      metrics: [{ value: "500+", label: "Restaurant partners affected" }, { value: "85–90%", label: "Target delay reduction" }, { value: "95%", label: "Target efficiency gain" }],
+      sections: [
+        { label: "Solution", bullets: ["Brewery Management System (BMS) digitising the full production lifecycle", "Automated demand forecasting using historical sales data", "IoT fermentation monitoring replacing manual tracking", "Real-time inventory with automated team notifications"] },
+        { label: "My Contribution", bullets: ["Documented As-Is and To-Be workflows across production, quality, and supply chain", "Defined functional and non-functional system requirements for the BMS", "Contributed to the full Business Requirements Document", "Stakeholder mapping across production, quality, sales, and logistics"] },
+        { label: "Impact", bullets: ["Full BRD delivered covering all production lifecycle stages", "Clear digital transformation roadmap established for stakeholder sign-off", "Root causes of bottling failures and inventory gaps documented", "Foundation laid for vendor selection and system implementation"] },
+      ],
+      insight: "Manual systems don't just slow operations — they hide the true scale of inefficiency. The data only became visible when we mapped the full workflow end to end.",
+      tools: "BRD · Process mapping · Requirements engineering · Stakeholder analysis",
+    },
+  },
+  {
+    id: "novamart",
+    industry: "Analytics · Retail",
+    title: "Retail Analytics Dashboard — Novamart",
+    summary: "Retail leadership lacked a unified view of sales performance across channels. I queried transactional data using PostgreSQL and built an interactive Power BI dashboard to surface product, revenue, and channel insights.",
+    tools: ["PostgreSQL", "Power BI", "Excel", "KPI Design"],
+    detail: {
+      role: "Business Analyst — 10Alytics (Remote) · Team: POD Lyra",
+      problem: "Retail leadership had no consolidated view of sales performance across product categories and channels. Decisions on inventory, pricing, and promotions were made without clear data visibility.",
+      metrics: [{ value: "PostgreSQL", label: "Data querying" }, { value: "Power BI", label: "Visualisation" }, { value: "6 KPIs", label: "Defined for leadership" }],
+      sections: [
+        { label: "Approach", bullets: ["Queried transactional datasets in PostgreSQL — revenue by category, top products, channel performance", "Monthly trend analysis to surface seasonality and demand patterns", "KPI framework designed around actual leadership decision-making needs", "Datasets loaded into Power BI for interactive dashboard visualisation"] },
+        { label: "My Contribution", bullets: ["Designed and ran SQL queries to extract and transform retail transaction data", "Defined 6-KPI framework aligned to business decisions", "Contributed to Power BI dashboard layout and visual hierarchy", "Translated data findings into inventory and channel planning recommendations"] },
+        { label: "Impact", bullets: ["Leadership gained real-time sales visibility for the first time", "Top and bottom performing products clearly identified", "Channel performance gaps surfaced to inform distribution strategy", "Dashboard adopted as ongoing operational reporting tool"] },
+      ],
+      insight: "The dashboard didn't just surface data — it changed the questions leadership was able to ask. Visibility is itself a product decision.",
+      tools: "PostgreSQL · Power BI · Excel · KPI framework design",
+    },
+  },
+];
+
+/* ── COMPONENT ── */
+export default function Portfolio() {
+  const [activeCase, setActiveCase] = useState(null);
+  const [visible, setVisible] = useState(new Set());
+  const refs = useRef({});
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) setVisible((v) => new Set([...v, e.target.dataset.key])); }),
+      { threshold: 0.08 }
+    );
+    Object.values(refs.current).forEach((el) => el && obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = activeCase ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [activeCase]);
+
+  const setRef = (key) => (el) => { refs.current[key] = el; if (el) el.dataset.key = key; };
+  const fade = (key, delay = 0) => ({
+    opacity: visible.has(key) ? 1 : 0,
+    transform: visible.has(key) ? "translateY(0)" : "translateY(20px)",
+    transition: `opacity 0.65s ${delay}s ease, transform 0.65s ${delay}s ease`,
+  });
+
+  const c = activeCase ? cases.find((x) => x.id === activeCase) : null;
+  const Diagram = activeCase ? diagrams[activeCase] : null;
+
+  return (
+    <div style={{ fontFamily: "'DM Sans', sans-serif", background: "#f5f3ef", color: "#1a1a18", minHeight: "100vh", fontSize: 16 }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { overflow-x: hidden; }
+        .nav-a { color: #6b6860; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; transition: color 0.2s; }
+        .nav-a:hover { color: #1a1a18; }
+        .card { background: #fff; padding: 2.4rem; cursor: pointer; transition: background 0.25s, transform 0.18s; border: 1px solid #dedad4; }
+        .card:hover { background: #1a1a18; transform: translateY(-2px); }
+        .card:hover .ci { color: #b8963e !important; }
+        .card:hover .ct { color: #f5f3ef !important; }
+        .card:hover .cs { color: #9e9b96 !important; }
+        .card:hover .ctool { border-color: rgba(255,255,255,0.15) !important; color: #9e9b96 !important; }
+        .card:hover .ca { color: #b8963e !important; transform: translate(3px,-3px); }
+        .ca { display: inline-block; transition: transform 0.25s, color 0.25s; color: #dedad4; }
+        .close-x { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #6b6860; line-height: 1; padding: 0.3rem; transition: color 0.2s; }
+        .close-x:hover { color: #1a1a18; }
+        .overlay { position: fixed; inset: 0; background: rgba(26,26,24,0.55); backdrop-filter: blur(5px); z-index: 200; display: flex; align-items: flex-start; justify-content: center; padding: 2rem; overflow-y: auto; }
+        .detail { background: #f5f3ef; max-width: 740px; width: 100%; margin: auto; padding: 3rem; position: relative; }
+        .email-a { color: #1a1a18; text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem,3vw,2.1rem); font-weight: 300; border-bottom: 1px solid #1a1a18; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+        .email-a:hover { color: #b8963e; border-color: #b8963e; }
+        .ext-a { color: #6b6860; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+        .ext-a:hover { color: #1a1a18; }
+        @keyframes up { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
+        .a1{animation:up 0.9s 0.28s both;} .a2{animation:up 0.9s 0.44s both;} .a3{animation:up 0.9s 0.58s both;} .a4{animation:up 0.9s 0.72s both;}
+        @media(max-width:700px){
+          .two-col{flex-direction:column!important;}
+          .case-grid{grid-template-columns:1fr!important;}
+          .exp-grid{grid-template-columns:1fr!important;gap:0.2rem!important;}
+          .met-grid{grid-template-columns:1fr 1fr!important;}
+          .kpi-grid{grid-template-columns:1fr 1fr!important;}
+          .detail{padding:1.8rem 1.2rem!important;}
+        }
+      `}</style>
+
+      {/* NAV */}
+      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:100, background:"#f5f3ef", borderBottom:"1px solid #dedad4", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"0 6vw", height:62 }}>
+        <span style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:"1.1rem", fontWeight:400, letterSpacing:"0.04em" }}>Ivy Uduojie</span>
+        <div style={{ display:"flex", gap:"2.2rem" }}>
+          {["About","Experience","Work","Contact"].map((l)=>(
+            <a key={l} href={`#${l.toLowerCase()}`} className="nav-a">{l}</a>
+          ))}
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section style={{ paddingTop:62, minHeight:"90vh", display:"flex", flexDirection:"column", justifyContent:"center", padding:"62px 6vw 5rem" }}>
+        <p className="a1" style={{ fontSize:"0.7rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"#b8963e", marginBottom:"1.6rem", fontWeight:400 }}>Product Manager · Toronto, ON</p>
+        <h1 className="a2" style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:"clamp(3rem,8vw,6.5rem)", fontWeight:300, lineHeight:1.0, color:"#1a1a18", marginBottom:"2rem" }}>
+          Ivy<br /><em style={{ color:"#6b6860" }}>Uduojie</em>
+        </h1>
+        <p className="a3" style={{ maxWidth:500, fontSize:"0.97rem", color:"#6b6860", lineHeight:1.85, marginBottom:"2.5rem", fontWeight:300 }}>
+          Fintech and financial services product professional with experience across digital lending, consumer banking, and business analytics. I translate complex operational problems into clear product decisions.
+        </p>
+        <div className="a4" style={{ display:"flex", flexWrap:"wrap", gap:"0.5rem" }}>
+          {["Fintech","Digital Lending","Product Management","Business Analysis","Financial Services"].map((t)=>(
+            <span key={t} style={{ padding:"0.3rem 0.85rem", border:"1px solid #dedad4", fontSize:"0.68rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#6b6860" }}>{t}</span>
+          ))}
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" style={{ padding:"6rem 6vw", borderTop:"1px solid #dedad4" }}>
+        <p style={{ fontSize:"0.68rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"#b8963e", marginBottom:"0.8rem" }}>About</p>
+        <h2 ref={setRef("ah")} style={{ ...fade("ah"), fontFamily:"'Cormorant Garamond', serif", fontSize:"clamp(1.9rem,4vw,3rem)", fontWeight:300, lineHeight:1.15, marginBottom:"3rem", maxWidth:620 }}>
+          Product thinking grounded in financial services.
+        </h2>
+        <div className="two-col" style={{ display:"flex", gap:"4rem", alignItems:"flex-start" }}>
+          <div style={{ flex:1 }}>
+            {[
+              <p>I am a product professional with experience in <strong style={{ color:"#1a1a18", fontWeight:500 }}>digital lending and consumer banking</strong>, where I worked on live financial products serving thousands of customers. My work sits at the intersection of product strategy, risk management, and operational systems.</p>,
+              <p>More recently I have developed strong <strong style={{ color:"#1a1a18", fontWeight:500 }}>business analysis and data skills</strong> through project work spanning operational transformation, process design, and analytics dashboards. I work well in cross-functional teams and translate business goals into technical requirements.</p>,
+              <p>Targeting roles in <strong style={{ color:"#1a1a18", fontWeight:500 }}>fintech, digital banking, and financial services</strong> where domain knowledge and analytical depth can add immediate value.</p>,
+            ].map((node, i) => (
+              <div key={i} ref={setRef(`ab${i}`)} style={{ ...fade(`ab${i}`, i*0.1), color:"#6b6860", marginBottom:"1.1rem", lineHeight:1.85, fontWeight:300, fontSize:"0.95rem" }}>{node}</div>
+            ))}
+          </div>
+          <div style={{ flex:1 }}>
+            {[
+              { label:"Core Skills", value:"Product Strategy · Requirements & BRD · Stakeholder Management · Risk Analysis · Data Analysis" },
+              { label:"Tools", value:"Jira · Confluence · Power BI · PostgreSQL · Excel · Figma" },
+              { label:"Domain", value:"Digital Lending · Consumer Credit · Operational Transformation · Retail Analytics" },
+              { label:"Education", value:"Business Analysis — 10Alytics · MBA (in progress)" },
+            ].map(({ label, value }, i) => (
+              <div key={label} ref={setRef(`sk${i}`)} style={{ ...fade(`sk${i}`, i*0.1), borderTop:"1px solid #dedad4", paddingTop:"0.9rem", marginBottom:"1.3rem" }}>
+                <p style={{ fontSize:"0.63rem", letterSpacing:"0.14em", textTransform:"uppercase", color:"#6b6860", marginBottom:"0.3rem" }}>{label}</p>
+                <p style={{ fontSize:"0.85rem", color:"#1a1a18", fontWeight:300 }}>{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section id="experience" style={{ padding:"6rem 6vw", borderTop:"1px solid #dedad4" }}>
+        <p style={{ fontSize:"0.68rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"#b8963e", marginBottom:"0.8rem" }}>Experience</p>
+        <h2 ref={setRef("exh")} style={{ ...fade("exh"), fontFamily:"'Cormorant Garamond', serif", fontSize:"clamp(1.9rem,4vw,3rem)", fontWeight:300, lineHeight:1.15, marginBottom:"3rem" }}>
+          Where I have worked.
+        </h2>
+        {[
+          { company:"United Bank for Africa", period:"Digital Banking · Lagos, Nigeria", role:"Product Manager, Digital Lending", desc:"Managed UBA Click Credit, a mobile-first digital lending product providing unsecured consumer loans. Worked across product, credit risk, compliance, and operations.", bullets:["Identified systemic default risk driven by insufficient borrower employment verification, leading to product workflow improvements","Collaborated with credit risk teams to analyse default drivers and translate findings into product requirements","Balanced product availability against portfolio risk, maintaining the lending channel while strengthening controls","Managed product decisions across consumer lending portfolio including personal loans, asset finance, and salary-backed credit"] },
+          { company:"Wema Bank", period:"Retail Banking · Nigeria", role:"Product & Operations", desc:"Supported retail banking product operations with a focus on consumer lending, customer experience, and operational processes.", bullets:["Supported credit product operations across the retail lending portfolio","Worked with cross-functional teams to improve operational workflows and customer outcomes"] },
+          { company:"10Alytics", period:"Remote · Business Analyst", role:"Business Analyst", desc:"Delivered end-to-end business analysis projects across product design, operational transformation, and data analytics in a cross-functional team environment.", bullets:["Queried transactional datasets using PostgreSQL and built Power BI dashboards to surface retail performance insights","Led requirements gathering, stakeholder analysis, and BRD documentation across multiple projects","Managed project backlog and sprint planning in Jira using Agile methodology"] },
+        ].map(({ company, period, role, desc, bullets }, i) => (
+          <div key={company} ref={setRef(`ex${i}`)} style={{ ...fade(`ex${i}`), borderTop:"1px solid #dedad4", padding:"2rem 0" }}>
+            <div className="exp-grid" style={{ display:"grid", gridTemplateColumns:"200px 1fr", gap:"2rem" }}>
+              <div>
+                <p style={{ fontSize:"0.67rem", letterSpacing:"0.12em", textTransform:"uppercase", color:"#b8963e", marginBottom:"0.3rem" }}>{company}</p>
+                <p style={{ fontSize:"0.75rem", color:"#6b6860", fontWeight:300 }}>{period}</p>
+              </div>
+              <div>
+                <p style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:"1.25rem", fontWeight:400, color:"#1a1a18", marginBottom:"0.55rem" }}>{role}</p>
+                <p style={{ fontSize:"0.85rem", color:"#6b6860", lineHeight:1.8, marginBottom:"0.8rem", fontWeight:300 }}>{desc}</p>
+                {bullets.map((b, bi) => (
+                  <p key={bi} style={{ fontSize:"0.83rem", color:"#6b6860", paddingLeft:"1.1rem", position:"relative", lineHeight:1.75, marginBottom:"0.3rem", fontWeight:300 }}>
+                    <span style={{ position:"absolute", left:0, color:"#dedad4" }}>—</span>{b}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+        <div style={{ borderBottom:"1px solid #dedad4" }} />
+      </section>
+
+      {/* CASE STUDIES */}
+      <section id="work" style={{ padding:"6rem 6vw", borderTop:"1px solid #dedad4" }}>
+        <p style={{ fontSize:"0.68rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"#b8963e", marginBottom:"0.8rem" }}>Case Studies</p>
+        <h2 ref={setRef("wh")} style={{ ...fade("wh"), fontFamily:"'Cormorant Garamond', serif", fontSize:"clamp(1.9rem,4vw,3rem)", fontWeight:300, lineHeight:1.15, marginBottom:"2.5rem" }}>Selected work.</h2>
+        <div className="case-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:3 }}>
+          {cases.map((cs, i) => (
+            <div key={cs.id} ref={setRef(`cc${i}`)} style={fade(`cc${i}`, i*0.08)} className="card" onClick={() => setActiveCase(cs.id)}>
+              <p className="ci" style={{ fontSize:"0.65rem", letterSpacing:"0.16em", textTransform:"uppercase", color:"#b8963e", marginBottom:"1rem", transition:"color 0.25s" }}>{cs.industry}</p>
+              <h3 className="ct" style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:"1.4rem", fontWeight:400, color:"#1a1a18", lineHeight:1.25, marginBottom:"0.9rem", transition:"color 0.25s" }}>{cs.title}</h3>
+              <div style={{ width:28, height:1, background:"#dedad4", marginBottom:"0.9rem" }} />
+              <p className="cs" style={{ fontSize:"0.83rem", color:"#6b6860", lineHeight:1.78, marginBottom:"1.5rem", fontWeight:300, transition:"color 0.25s" }}>{cs.summary}</p>
+              <div style={{ display:"flex", flexWrap:"wrap", gap:"0.4rem", marginBottom:"1.8rem" }}>
+                {cs.tools.map((t) => (
+                  <span key={t} className="ctool" style={{ fontSize:"0.63rem", letterSpacing:"0.09em", textTransform:"uppercase", border:"1px solid #dedad4", padding:"0.18rem 0.55rem", color:"#6b6860", transition:"color 0.25s, border-color 0.25s" }}>{t}</span>
+                ))}
+              </div>
+              <span className="ca">↗</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" style={{ padding:"6rem 6vw", borderTop:"1px solid #dedad4" }}>
+        <p style={{ fontSize:"0.68rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"#b8963e", marginBottom:"0.8rem" }}>Contact</p>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", flexWrap:"wrap", gap:"2.5rem" }}>
+          <div style={{ maxWidth:460 }}>
+            <h2 style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:"clamp(1.9rem,4vw,3rem)", fontWeight:300, lineHeight:1.15, marginBottom:"1rem" }}>Let's talk product.</h2>
+            <p style={{ color:"#6b6860", fontSize:"0.92rem", lineHeight:1.8, marginBottom:"1.8rem", fontWeight:300 }}>Open to product management roles in fintech, digital banking, and financial services. Based in Toronto — available immediately.</p>
+            <a className="email-a" href="mailto:ivy.n.uduojie@gmail.com">ivy.n.uduojie@gmail.com</a>
+          </div>
+          <div style={{ display:"flex", gap:"2rem" }}>
+            <a className="ext-a" href="https://linkedin.com/in/ivy-uduojie" target="_blank">LinkedIn ↗</a>
+            <a className="ext-a" href="https://ivyuduojie.github.io" target="_blank">Portfolio ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ padding:"1.8rem 6vw", borderTop:"1px solid #dedad4", display:"flex", justifyContent:"space-between" }}>
+        <p style={{ fontSize:"0.68rem", color:"#dedad4", letterSpacing:"0.06em" }}>© 2026 Ivy Uduojie</p>
+        <p style={{ fontSize:"0.68rem", color:"#dedad4", letterSpacing:"0.06em" }}>Toronto, ON · Canada</p>
+      </footer>
+
+      {/* OVERLAY */}
+      {activeCase && c && (
+        <div className="overlay" onClick={(e) => { if (e.target === e.currentTarget) setActiveCase(null); }}>
+          <div className="detail">
+            <button className="close-x" onClick={() => setActiveCase(null)} style={{ position:"absolute", top:"1.2rem", right:"1.2rem" }}>×</button>
+            <p style={{ fontSize:"0.65rem", letterSpacing:"0.15em", textTransform:"uppercase", color:"#b8963e", marginBottom:"0.7rem" }}>{c.industry}</p>
+            <h2 style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:"clamp(1.5rem,3vw,2rem)", fontWeight:300, lineHeight:1.2, color:"#1a1a18", marginBottom:"0.6rem" }}>{c.title}</h2>
+            <p style={{ fontSize:"0.78rem", color:"#6b6860", marginBottom:"2rem", paddingBottom:"2rem", borderBottom:"1px solid #dedad4", fontWeight:300 }}>{c.detail.role}</p>
+            <div style={{ marginBottom:"1.6rem" }}>
+              <p style={{ fontSize:"0.63rem", letterSpacing:"0.14em", textTransform:"uppercase", color:"#6b6860", marginBottom:"0.6rem" }}>The Problem</p>
+              <p style={{ fontSize:"0.88rem", color:"#6b6860", lineHeight:1.82, fontWeight:300 }}>{c.detail.problem}</p>
+            </div>
+            {Diagram && <Diagram />}
+            <div className="met-grid" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"1rem", background:"#fff", padding:"1.6rem", marginBottom:"1.8rem" }}>
+              {c.detail.metrics.map(({ value, label }) => (
+                <div key={label} style={{ textAlign:"center" }}>
+                  <p style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:"1.6rem", fontWeight:300, color:"#1a1a18", lineHeight:1, marginBottom:"0.35rem" }}>{value}</p>
+                  <p style={{ fontSize:"0.6rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#6b6860" }}>{label}</p>
+                </div>
+              ))}
+            </div>
+            {c.detail.sections.map(({ label, bullets }) => (
+              <div key={label} style={{ marginBottom:"1.5rem" }}>
+                <p style={{ fontSize:"0.63rem", letterSpacing:"0.14em", textTransform:"uppercase", color:"#6b6860", marginBottom:"0.6rem" }}>{label}</p>
+                {bullets.map((b, i) => (
+                  <p key={i} style={{ fontSize:"0.86rem", color:"#6b6860", paddingLeft:"1.1rem", position:"relative", lineHeight:1.78, marginBottom:"0.3rem", fontWeight:300 }}>
+                    <span style={{ position:"absolute", left:0, color:"#dedad4" }}>—</span>{b}
+                  </p>
+                ))}
+              </div>
+            ))}
+            <div style={{ background:"#fff", padding:"1.4rem", marginBottom:"1.5rem", borderLeft:"2px solid #b8963e" }}>
+              <p style={{ fontSize:"0.63rem", letterSpacing:"0.14em", textTransform:"uppercase", color:"#6b6860", marginBottom:"0.45rem" }}>Key Insight</p>
+              <p style={{ fontSize:"0.92rem", color:"#1a1a18", lineHeight:1.75, fontFamily:"'Cormorant Garamond', serif", fontStyle:"italic", fontWeight:300 }}>{c.detail.insight}</p>
+            </div>
+            <div>
+              <p style={{ fontSize:"0.63rem", letterSpacing:"0.14em", textTransform:"uppercase", color:"#6b6860", marginBottom:"0.35rem" }}>Tools Used</p>
+              <p style={{ fontSize:"0.83rem", color:"#6b6860", fontWeight:300 }}>{c.detail.tools}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
